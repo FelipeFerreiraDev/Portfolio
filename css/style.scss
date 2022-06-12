@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'sass/colors';
+@import 'sass/typography';
+
+
+body {
+    width: 100%;
+    background-color: $black-dark;
+}
+
+@import 'sass/spacing';
+@import 'sass/layout';
+
+
+.text-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3.9s steps(40) infinite alternate,
+      blink 800ms steps(12) infinite normal;
+    border-right: 3px solid black;
+}
+
+@keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 71%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: white;
+    }
+    to {
+      border-color: transparent;
+    }
+  }
