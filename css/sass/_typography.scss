@@ -11,6 +11,8 @@ a {
 .link {
     padding: 12px 24px;
     font-size: 16px;
+
+    display: inline-block;
     
     transition: .5s ease;
     
@@ -120,7 +122,7 @@ h6 {
         width: 120px;
         height: 120px;
 
-        transform: translate(-5%, -23%) rotate(45deg);
+        transform: translate(12%, -23%) rotate(45deg);
 
         background: linear-gradient(225deg, $blue-normal 0%, rgba(83, 139, 240, 0) 100%);
 
@@ -130,7 +132,7 @@ h6 {
 
     &:hover {
         &::after {
-            transform: translate(-5%, -23%) rotate(140deg);
+            transform: translate(12%, -23%) rotate(140deg);
         }
     }
 }

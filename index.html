@@ -13,15 +13,15 @@
 <body>
     <header class="menu">
         <div class="menu-left">
-            <a href="" class="link">Home</a>
-            <a href="" class="link">About</a>
+            <a href="" class="link menu-1">Home</a>
+            <a href="" class="link menu-2">Sobre</a>
         </div>
         <div class="menu-logo">
-            <h5>&lt Felipe F. /&gt</h5>
+            <h5 class="menu-3">&lt Felipe F. /&gt</h5>
         </div>
         <div class="menu-right">
-            <a href="" class="link">Works</a>
-            <a href="" class="link">Get in touch</a>
+            <a href="" class="link menu-4">Trabalhos</a>
+            <a href="" class="link menu-5">Entre em contato</a>
         </div>
     </header>
     
@@ -97,17 +97,167 @@
 
     <section class="container hero">
         <div class="container-item">
-            <h1>Felipe Ferreira</h1>
-            <h3 class="mask text-right mt-7">Full-Stack Developer</h3>
-            <h3 class="mask text-animation">Studying computer science</h3>
+            <div>
+                <h1>Felipe Ferreira</h1>
+            </div>
+            <div>
+                <h3 class="mask text-right mt-7">Full-Stack Developer</h3>
+            </div>
+            <div>
+                <h3 class="mask text-animation">Cursando Ciência da computação</h3>
+            </div>
 
             <div class="flex-end pr-8">
-                <a href="" class="square">Works</a>
+                <a href="" class="square">Trabalhos</a>
             </div>
         </div>
         <div class="container-item">
-            <img src="https://avatars.githubusercontent.com/u/48157305?v=4" alt="">
+            <div>
+                <img src="https://avatars.githubusercontent.com/u/48157305?v=4" alt="">
+            </div>
         </div>
     </section>
+
+    <section class="list" id="section-01">
+        <div class="list-item">
+            <h2>Premiações e Bolsas</h2>
+        </div>
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2">01.</h5>
+            <div class="flex-between">
+                <a href="" target="_blank">
+                    <h3>👨‍🔬 Alarme Fármaco - PIBITI</h3>
+                </a>
+                <a href="">Ver Repositório</a>
+            </div>
+        </div>
+
+        <div class="border-gray"></div>
+
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2">02.</h5>
+            <div class="flex-between">
+                <a href="" target="_blank">
+                    <h3>🏆 On-Maps - Hackathon</h3>
+                </a>
+                <a href="">Ver Repositório</a>
+            </div>
+        </div>
+
+        <div class="border-gray"></div>
+
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2">03.</h5>
+            <div class="flex-between">
+                <a href="" target="_blank">
+                    <h3>🚀 Gerador Web - PIBEX</h3>
+                </a>
+                <a href="">Ver Repositório</a>
+            </div>
+        </div>
+
+        <div class="border-gray"></div>
+
+    </section>
+
+    <section class="my-profile" id="section-02">
+        <div class="about">
+            <img src="assets/IMG-20191119-WA0049.jpg" alt="" class="mr-9 ml-5">
+            <div class="aboutme">
+                <h3 class="mb-3">Quem eu sou<span>.</span></h3>
+                <p>
+                    Olá meu nome é Felipe Ferreira, sou do Brasil. Estudo programação 
+                desde 2017, sou formado técnico em informática, atualmente sou bolsista 
+                pela Universidade Estadual do Norte do Paraná onde curso Ciência da computação.
+                Sou apaixonado por programação principalmente por desenvolvimento web e mobile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="get mt-7">
+        <h2>Entre em contato</h2>
+        <h3 class="mt-9 mask text-center">felipeferreiradev@gmail.com</h3>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let tl = gsap.timeline();
+
+            tl.from(".menu-1", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                delay: 0.5,
+                ease: "power3.out",
+            })
+            .from(".menu-2", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.1")
+            .from(".menu-3", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.1")
+            .from(".menu-4", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.1")
+            .from(".menu-5", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.1")
+            .from(".bg-hero", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                ease: "power3.out",
+            }, "-=0.1")
+            .from(".container-item div", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+            }, "-=0.3")
+        
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from("#section-01 div", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#section-01",
+                }
+            });
+
+            gsap.from("#section-02 div", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#section-01",
+                }
+            })
+        })
+    </script>
 </body>
 </html>
