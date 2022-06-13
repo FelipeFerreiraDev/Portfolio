@@ -134,6 +134,20 @@ h6 {
           transform: translate(12%, -23%) rotate(140deg);
 }
 
+@media screen and (max-width: 960px) {
+  .square {
+    display: inline-block;
+    margin-top: 64px;
+    font-size: 16px;
+    padding: 10px 16px;
+    position: relative;
+  }
+  .square::after {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 body {
   width: 100%;
   background-color: #050607;
@@ -1201,12 +1215,145 @@ body {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+  .container {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .container-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .container-item h1 {
+    font-size: 22px;
+  }
+  .container .container-item h2 {
+    font-size: 2px;
+  }
+  .container .container-item h3 {
+    font-size: 18px;
+  }
+  .container .container-item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+  .list .list-item {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list .list-item h2 {
+    font-size: 20px;
+  }
+  .list .list-item h3 {
+    font-size: 16px;
+  }
+  .list .list-item h5 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .list .list-item .flex-between {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list .list-item .flex-between a {
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    font-size: 12px;
+  }
+  .my-profile {
+    padding: 0;
+    width: 100%;
+  }
+  .my-profile .about {
+    width: 100%;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my-profile .about img {
+    margin: 20px 0 30px 0 !important;
+    height: 150px;
+    width: 150px;
+  }
+  .my-profile .about .aboutme {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+  }
+  .get h2 {
+    font-size: 16px;
+  }
+  .get h3 {
+    font-size: 12px;
+  }
+}
+
 .text-animation {
   white-space: nowrap;
   overflow: hidden;
   -webkit-animation: typewriter 3.9s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
           animation: typewriter 3.9s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
   border-right: 3px solid black;
+}
+
+@media screen and (max-width: 375px) {
+  .text-animation {
+    -webkit-animation: none;
+            animation: none;
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 @-webkit-keyframes typewriter {

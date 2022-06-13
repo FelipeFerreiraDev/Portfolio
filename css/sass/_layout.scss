@@ -312,3 +312,114 @@
         transform: rotate(10deg);
     }
 }
+
+@media screen and (max-width: 960px) {
+    .menu {
+        display: none;
+    }
+
+    .container {
+        max-width: 200px;
+        margin: 0 auto;
+    
+        padding: 0px 0px;
+    
+        display: flex;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .container-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                font-size: 22px;
+            }
+    
+            h2 {
+                font-size: 2px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .list {
+        .list-item {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            h5 {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .flex-between {
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            
+                a {
+                    text-align: center;
+                    width: 50%;
+                    height: 50px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .my-profile {
+        padding: 0;
+        width: 100%;
+        .about {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                margin: 20px 0 30px 0 !important;
+                height: 150px;
+                width: 150px;
+            }
+
+            .aboutme {
+                text-align: center;
+                padding: 10px 10px 10px 10px;
+            }
+        }
+    }
+
+    .get {
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-size: 12px;
+        }
+    }
+
+}

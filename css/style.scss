@@ -25,6 +25,14 @@ body {
     border-right: 3px solid black;
 }
 
+@media screen and (max-width: 375px){
+  .text-animation {
+    animation: none;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
 @keyframes typewriter {
     from {
       width: 0%;

@@ -50,6 +50,7 @@ h1 {
     line-height: 100%;
 }
 
+
 @media screen and (max-width: 960px) {
     h1 {
         font-size: 64px;
@@ -100,6 +101,7 @@ h6 {
     text-align: right;
 } 
 
+
 .square {
     display: inline-block;
     margin-top: 64px;
@@ -133,6 +135,24 @@ h6 {
     &:hover {
         &::after {
             transform: translate(12%, -23%) rotate(140deg);
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .square {
+        display: inline-block;
+        margin-top: 64px;
+
+        font-size: 16px;
+
+        padding: 10px 16px;
+
+        position: relative;
+
+        &::after {
+            width: 80px;
+            height: 80px;
         }
     }
 }
