@@ -135,6 +135,7 @@ h6 {
     &:hover {
         &::after {
             transform: translate(12%, -23%) rotate(140deg);
+            box-shadow: 0 0 80px $blue-normal;
         }
     }
 }

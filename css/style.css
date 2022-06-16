@@ -132,6 +132,8 @@ h6 {
 .square:hover::after {
   -webkit-transform: translate(12%, -23%) rotate(140deg);
           transform: translate(12%, -23%) rotate(140deg);
+  -webkit-box-shadow: 0 0 80px #993399;
+          box-shadow: 0 0 80px #993399;
 }
 
 @media screen and (max-width: 960px) {
@@ -1229,7 +1231,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40%;
+  margin-bottom: 50%;
 }
 
 .chevron {
