@@ -94,7 +94,6 @@
         </div>
     </div>
 
-
     <section class="container hero">
         <div class="container-item">
             <div>
@@ -117,6 +116,13 @@
             </div>
         </div>
     </section>
+
+
+    <div class="container-svg">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
 
     <section class="list" id="section-01">
         <div class="list-item">
@@ -185,8 +191,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
+    <script>/*
+        let largura = window.screen.width;
+
         document.addEventListener('DOMContentLoaded', () => {
+            
+            if(largura>960) {
+            
             let tl = gsap.timeline();
 
             tl.from(".menu-1", {
@@ -233,31 +244,31 @@
                 stagger: {each: 0.2},
                 ease: "power3.out",
             }, "-=0.3")
-        
-            gsap.registerPlugin(ScrollTrigger);
+                gsap.registerPlugin(ScrollTrigger);
 
-            gsap.from("#section-01 div", {
-                duration: 1,
-                y: 300,
-                opacity: 0,
-                stagger: {each: 0.2},
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: "#section-01",
-                }
-            });
+                gsap.from("#section-01 div", {
+                    duration: 2,
+                    y: 300,
+                    opacity: 0,
+                    stagger: {each: 0.2},
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: "#section-01",
+                    }
+                });
 
-            gsap.from("#section-02 div", {
-                duration: 1,
-                y: 300,
-                opacity: 0,
-                stagger: {each: 0.2},
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: "#section-01",
-                }
-            })
-        })
+                gsap.from("#section-02 div", {
+                    duration: 2,
+                    y: 300,
+                    opacity: 0,
+                    stagger: {each: 0.2},
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: "#section-01",
+                    }
+                })
+            }
+        })*/
     </script>
 </body>
 </html>

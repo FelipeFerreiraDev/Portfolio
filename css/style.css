@@ -759,6 +759,7 @@ body {
 }
 
 .menu {
+  z-index: 9999;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -766,8 +767,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 48px 16px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  padding: 32px 16px 32px 16px;
   position: fixed;
+  background-color: rgba(10, 9, 9, 0.4);
 }
 
 @media screen and (max-width: 960px) {
@@ -1215,13 +1219,112 @@ body {
   }
 }
 
+.container-svg {
+  margin-top: -150px;
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40%;
+}
+
+.chevron {
+  position: absolute;
+  width: 3.5rem;
+  height: 0.8rem;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: move-chevron 3s ease-out infinite;
+          animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  -webkit-animation: move-chevron 3s ease-out 1s infinite;
+          animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  -webkit-animation: move-chevron 3s ease-out 2s infinite;
+          animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #7a007a;
+}
+
+.chevron:before {
+  left: 0;
+  -webkit-transform: skewY(30deg);
+          transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  -webkit-transform: skewY(-30deg);
+          transform: skewY(-30deg);
+}
+
+@-webkit-keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(3.8rem);
+            transform: translateY(3.8rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(5.2rem);
+            transform: translateY(5.2rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(8rem) scale(0.5);
+            transform: translateY(8rem) scale(0.5);
+  }
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(3.8rem);
+            transform: translateY(3.8rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(5.2rem);
+            transform: translateY(5.2rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(8rem) scale(0.5);
+            transform: translateY(8rem) scale(0.5);
+  }
+}
+
 @media screen and (max-width: 960px) {
   .menu {
     display: none;
   }
   .container {
     max-width: 200px;
-    margin: 0 auto;
+    margin: 0 auto 120px auto;
     padding: 0px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1265,6 +1368,12 @@ body {
     width: 150px;
     height: 150px;
     margin-bottom: 30px;
+  }
+  .container-svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
   }
   .list .list-item {
     padding: 0;
@@ -1342,15 +1451,13 @@ body {
 .text-animation {
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: typewriter 3.9s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
-          animation: typewriter 3.9s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
+  -webkit-animation: typewriter 5s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
+          animation: typewriter 5s steps(40) infinite alternate, blink 800ms steps(12) infinite normal;
   border-right: 3px solid black;
 }
 
 @media screen and (max-width: 375px) {
   .text-animation {
-    -webkit-animation: none;
-            animation: none;
     font-size: 12px;
     text-align: center;
   }
@@ -1361,7 +1468,7 @@ body {
     width: 0%;
   }
   to {
-    width: 84%;
+    width: 90%;
   }
 }
 
@@ -1370,7 +1477,7 @@ body {
     width: 0%;
   }
   to {
-    width: 84%;
+    width: 90%;
   }
 }
 
@@ -1389,6 +1496,41 @@ body {
   }
   to {
     border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  @-webkit-keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 102%;
+    }
+  }
+  @keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 102%;
+    }
+  }
+  @-webkit-keyframes blink {
+    from {
+      border-color: white;
+    }
+    to {
+      border-color: transparent;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: white;
+    }
+    to {
+      border-color: transparent;
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */
