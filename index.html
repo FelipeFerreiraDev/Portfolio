@@ -5,26 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Portfólio</title>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./scripts/script.js"></script>
+
+
     <header class="menu">
         <div class="menu-left">
-            <a href="" class="link menu-1">Home</a>
-            <a href="" class="link menu-2">Sobre</a>
+            <a href="#section-home" class="link menu-1">Home</a>
+            <a href="#section-02" class="link menu-2">Sobre</a>
         </div>
         <div class="menu-logo">
-            <h5 class="menu-3">&lt Felipe F. /&gt</h5>
+            <h5 class="menu-3">&ltFelipeF/&gt</h5>
         </div>
         <div class="menu-right">
-            <a href="" class="link menu-4">Trabalhos</a>
+            <a href="#section-01" class="link menu-4">Trabalhos</a>
             <a href="" class="link menu-5">Entre em contato</a>
         </div>
     </header>
-    
 
     <div class="relative">
         <div class="bg-hero">
@@ -94,7 +98,7 @@
         </div>
     </div>
 
-    <section class="container hero">
+    <section class="container hero" id="section-home">
         <div class="container-item">
             <div>
                 <h1>Felipe Ferreira</h1>
@@ -107,7 +111,7 @@
             </div>
 
             <div class="flex-end pr-8">
-                <a href="" class="square">Trabalhos</a>
+                <a href="section-01" class="square">Trabalhos</a>
             </div>
         </div>
         <div class="container-item">
@@ -117,7 +121,6 @@
         </div>
     </section>
 
-
     <div class="container-svg">
         <div class="chevron"></div>
         <div class="chevron"></div>
@@ -126,15 +129,15 @@
 
     <section class="list" id="section-01">
         <div class="list-item">
-            <h2>Premiações e Bolsas</h2>
+            <h2>Premiações e Bolsas<span>.</span></h2>
         </div>
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">01.</h5>
             <div class="flex-between">
-                <a href="" target="_blank">
+                <a href="https://github.com/FelipeFerreiraDev/Aplicativo-Alarme-Farmaco" target="_blank">
                     <h3>👨‍🔬 Alarme Fármaco - PIBITI</h3>
                 </a>
-                <a href="">Ver Repositório</a>
+                <a href="" target="_blank">Ver Repositório</a>
             </div>
         </div>
 
@@ -143,10 +146,10 @@
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">02.</h5>
             <div class="flex-between">
-                <a href="" target="_blank">
+                <a href="https://github.com/FelipeFerreiraDev/Remapeando-o-campus" target="_blank">
                     <h3>🏆 On-Maps - Hackathon</h3>
                 </a>
-                <a href="">Ver Repositório</a>
+                <a href="" target="_blank">Ver Repositório</a>
             </div>
         </div>
 
@@ -155,10 +158,10 @@
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">03.</h5>
             <div class="flex-between">
-                <a href="" target="_blank">
+                <a href="https://github.com/DaviR-D/GeradorWeb" target="_blank">
                     <h3>🚀 Gerador Web - PIBEX</h3>
                 </a>
-                <a href="">Ver Repositório</a>
+                <a href="" target="_blank">Ver Repositório</a>
             </div>
         </div>
 
@@ -181,94 +184,30 @@
         </div>
     </section>
 
+    <section class="container-certificados" id="section-03">
+        <h1>
+            Certificações<span>.</span>
+        </h1>
+        <div class="certificados">
+            <div class="certificados-coluna">
+                <h3>
+                    Quantidade
+                </h3>
+                <span data-number="8" data-speed="250">0</span>
+            </div>
+            <div class="certificados-coluna">
+                <h3>
+                    Total de Horas
+                </h3>
+                <span data-number="1560" data-speed="1">0</span>
+            </div>
+        </div>
+    </section>
+
     <section class="get mt-7">
         <h2>Entre em contato</h2>
         <h3 class="mt-9 mask text-center">felipeferreiradev@gmail.com</h3>
     </section>
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script>
-        let largura = window.screen.width;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            if(largura>960) {
-            
-            let tl = gsap.timeline();
-
-            tl.from(".menu-1", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                delay: 0.5,
-                ease: "power3.out",
-            })
-            .from(".menu-2", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power3.out",
-            }, "-=0.1")
-            .from(".menu-3", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power3.out",
-            }, "-=0.1")
-            .from(".menu-4", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power3.out",
-            }, "-=0.1")
-            .from(".menu-5", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                ease: "power3.out",
-            }, "-=0.1")
-            .from(".bg-hero", {
-                duration: 1,
-                y: 300,
-                opacity: 0,
-                ease: "power3.out",
-            }, "-=0.1")
-            .from(".container-item div", {
-                duration: 1,
-                y: 300,
-                opacity: 0,
-                stagger: {each: 0.2},
-                ease: "power3.out",
-            }, "-=0.3")
-                gsap.registerPlugin(ScrollTrigger);
-
-                gsap.from("#section-01 div", {
-                    duration: 2,
-                    y: 300,
-                    opacity: 0,
-                    stagger: {each: 0.2},
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: "#section-01",
-                    }
-                });
-
-                gsap.from("#section-02 div", {
-                    duration: 2,
-                    y: 300,
-                    opacity: 0,
-                    stagger: {each: 0.2},
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: "#section-01",
-                    }
-                })
-            }
-        })
-    </script>
 </body>
 </html>
