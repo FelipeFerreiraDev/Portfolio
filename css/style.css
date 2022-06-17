@@ -853,6 +853,18 @@ body {
   height: 100vh;
 }
 
+.container-item img {
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.container-item img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 @media screen and (max-width: 960px) {
   .hero {
     height: auto;
@@ -976,6 +988,7 @@ body {
 .my-profile {
   margin: 50px auto 50px;
   padding: 24px 16px;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1341,7 +1354,7 @@ body {
 }
 
 .container-certificados h1 {
-  margin-bottom: 150px;
+  margin-bottom: 130px;
 }
 
 .container-certificados h1 span {
@@ -1387,7 +1400,7 @@ body {
   padding: 16px 32px;
   font-family: 'Roboto';
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1398,6 +1411,92 @@ body {
   background: #7a007a;
   color: #F5F7F7;
   border-radius: 8px;
+}
+
+.container-languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 16px 24px;
+  margin: 150px 0px;
+}
+
+.container-languages .languages {
+  width: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-languages .languages span {
+  color: #993399;
+}
+
+.container-languages table {
+  width: 100%;
+  font-family: 'Roboto';
+}
+
+.container-languages table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.container-languages table tr td {
+  font-size: 24px;
+  margin: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-weight: 400;
+}
+
+.container-languages table tr td:hover {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 0 #993399 inset, 10px 12px 20px 0 #993399;
+          box-shadow: 0 0 0 0 #993399 inset, 10px 12px 20px 0 #993399;
+}
+
+.container-languages table tr td svg {
+  fill: #993399;
+  color: #993399;
+  width: 30%;
 }
 
 @media screen and (max-width: 960px) {
@@ -1559,7 +1658,7 @@ body {
     padding: 16px 32px;
     font-family: 'Roboto';
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -1623,6 +1722,40 @@ body {
     background: #7a007a;
     color: #F5F7F7;
     border-radius: 8px;
+  }
+  .container-languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 16px 24px;
+    margin: 50px 0px;
+  }
+  .container-languages h3 {
+    font-size: 24px;
+  }
+  .container-languages table {
+    width: 100%;
+    font-family: 'Roboto';
+  }
+  .container-languages table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .container-languages table tr td {
+    font-size: 12px;
   }
 }
 
