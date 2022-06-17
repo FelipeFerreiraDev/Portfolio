@@ -966,6 +966,10 @@ body {
           align-items: center;
 }
 
+.list-item h2 {
+  font-size: 40px;
+}
+
 .list-item .flex-between a:nth-child(2) {
   display: inline-block;
   color: #F5F7F7;
@@ -982,6 +986,8 @@ body {
 }
 
 .list-item .flex-between a:nth-child(2):hover {
+  -webkit-box-shadow: 0 0 0 0 #993399 inset, 10px 12px 20px 0 #993399;
+          box-shadow: 0 0 0 0 #993399 inset, 10px 12px 20px 0 #993399;
   opacity: 0.8;
 }
 
@@ -1017,6 +1023,25 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 8px;
+}
+
+.about .img-div::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  border-top: 9px solid #993399;
+  border-left: 9px solid #993399;
+  height: 80%;
+  width: 50%;
+  border-radius: 8px;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.about .img-div::after, .about ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .about .aboutme {
@@ -1353,11 +1378,11 @@ body {
           flex-direction: column;
 }
 
-.container-certificados h1 {
-  margin-bottom: 130px;
+.container-certificados h3 {
+  margin-bottom: 30px;
 }
 
-.container-certificados h1 span {
+.container-certificados h3 span {
   color: #7a007a;
 }
 
@@ -1407,7 +1432,7 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  font-size: 100px;
+  font-size: 50px;
   background: #7a007a;
   color: #F5F7F7;
   border-radius: 8px;
@@ -1566,12 +1591,13 @@ body {
   .list .list-item h2 {
     font-size: 20px;
   }
-  .list .list-item h3 {
-    font-size: 16px;
+  .list .list-item h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
   .list .list-item h5 {
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .list .list-item .flex-between {
     -webkit-box-pack: center;
@@ -1614,6 +1640,23 @@ body {
     height: 150px;
     width: 150px;
   }
+  .my-profile .about .img-div::after {
+    content: "";
+    position: absolute;
+    top: -2%;
+    left: -10%;
+    border-top: 9px solid #993399;
+    border-left: 9px solid #993399;
+    height: 70%;
+    width: 80%;
+    border-radius: 8px;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+  .my-profile .about .img-div::after, .my-profile .about ::before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   .my-profile .about .aboutme {
     text-align: center;
     padding: 10px 10px 10px 10px;
@@ -1624,7 +1667,7 @@ body {
   .get h3 {
     font-size: 12px;
   }
-  .container-certificados h1 {
+  .container-certificados h3 {
     font-size: 32px;
   }
   .container-certificados .certificados {
@@ -1673,8 +1716,8 @@ body {
 }
 
 @media screen and (max-width: 525px) {
-  .container-certificados h1 {
-    font-size: 32px;
+  .container-certificados h3 {
+    font-size: 24px;
   }
   .container-certificados .certificados {
     display: -webkit-box;

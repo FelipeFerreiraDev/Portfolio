@@ -81,6 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 startCounter
             })
+
+            gsap.from("#section-04", {
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#section-04",
+                }
+            })
+
+            gsap.from("#section-04 td", {
+                duration: 2,
+                y: 300,
+                opacity: 0,
+                stagger: {each: 0.2},
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#section-04",
+                }
+            })
 })
 
 function startCounter() {
