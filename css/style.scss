@@ -67,3 +67,18 @@ body {
     }
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 2px solid $blue-normal;
+  background-color: $white-normal;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px 0px 10px 0px;
+  background-color: $blue-dark;
+}
