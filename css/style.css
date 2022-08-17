@@ -167,7 +167,7 @@ h6 {
     height: 10px;
   }
 }
-@media screen and (width: 390px) and (height: 844px) {
+@media screen and (max-width: 390px) and (max-height: 844px) {
   .bubbles span {
     width: 1px;
     height: 2px;
