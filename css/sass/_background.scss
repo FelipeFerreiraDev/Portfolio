@@ -55,3 +55,9 @@
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    .container-background {
+        display: none;
+    }
+}

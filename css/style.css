@@ -173,6 +173,11 @@ h6 {
     height: 1px;
   }
 }
+@media screen and (max-width: 320px) {
+  .container-background {
+    display: none;
+  }
+}
 ul li a:hover {
   opacity: 0.8;
 }
