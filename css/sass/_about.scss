@@ -1,0 +1,43 @@
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 24px 0px 24px;
+
+    svg {
+        width: 500px;
+        height: 500px;
+    }
+
+    span {
+        color: $blue-dark
+    }
+
+    p {
+        line-height: 36px;
+        margin-bottom: 50px;
+        color: $gray-2;
+    }
+
+    h3 {
+        margin-top: 50px;
+    }
+}
+
+hr {
+    border: 1px solid $blue-dark;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 24px 0px 24px;
+
+        svg {
+            display: none;
+        }
+    }
+}

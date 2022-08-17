@@ -6,79 +6,31 @@
 
 @import 'sass/colors';
 @import 'sass/typography';
+@import 'sass/background';
+@import 'sass/menu';
+@import 'sass/skills';
 
 
 body {
-    width: 100%;
+    min-height: 100vh;
     background-color: $black-dark;
 }
 
 @import 'sass/spacing';
 @import 'sass/layout';
-
-
-.text-animation {
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typewriter 5s steps(40) infinite alternate,
-      blink 800ms steps(12) infinite normal;
-    border-right: 3px solid black;
-}
-
-@media screen and (max-width: 375px){
-  .text-animation {
-    font-size: 12px;
-    text-align: center;
-  }
-}
-
-@keyframes typewriter {
-    from {
-      width: 0%;
-    }
-    to {
-      width: 90%;
-    }
-  }
-  @keyframes blink {
-    from {
-      border-color: white;
-    }
-    to {
-      border-color: transparent;
-    }
-  }
-
-@media screen and (max-width: 960px) {
-  @keyframes typewriter {
-    from {
-      width: 0%;
-    }
-    to {
-      width: 102%;
-    }
-  }
-  @keyframes blink {
-    from {
-      border-color: white;
-    }
-    to {
-      border-color: transparent;
-    }
-  }
-}
+@import 'sass/home';
+@import 'sass/about';
 
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  border-radius: 4px;
   border: 2px solid $blue-normal;
   background-color: $white-normal;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 10px 0px 10px 0px;
   background-color: $blue-dark;
 }

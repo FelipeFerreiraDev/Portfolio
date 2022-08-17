@@ -1,0 +1,152 @@
+ul {
+    li {
+        a:hover {
+            opacity: .8;
+        }
+    }
+}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 50px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba($color: #000000, $alpha: .6), $blue-dark)
+}
+
+.logo-menu {
+    width: 150px;
+    height: 150px;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+#menu a {
+    display: block;
+    padding: 12px;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #header {
+        background: linear-gradient(to bottom, rgba($color: $blue-dark, $alpha: .99), rgba($color: $blue-dark, $alpha: 1));
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: linear-gradient(to top, rgba($color: #000000, $alpha: .5), rgba($color: $blue-dark, $alpha: 1));
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active  #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 12px 0;
+        margin: 0 12px;
+        border-bottom: 2px solid $blue-dark;
+    }
+
+    #btn-mobile {
+        outline: none;
+        display: flex;
+        padding: 6px 12px;
+        font-size: 12px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 6px;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: whitesmoke;
+        margin-left: 15vw;
+
+        &::after, &::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            margin-top: 5px;
+            transition: .3s;
+            position: relative;
+        }
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+
+        &::before {
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+            top: -7px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #menu a {
+        padding: 12px 24px;
+        font-size: 16px;
+
+        display: inline-block;
+        
+        transition: .5s ease;
+        
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            
+            top: 100%;
+            left: 0;
+            
+            width: 0%;
+            height: 2px;
+            
+            transition: .5s ease;
+            transform: translate(20%, -50%);
+
+            background-color: $blue-light;
+
+        }
+
+        &:hover {
+            opacity: .8;
+
+            &::after {
+                width: 70%;
+            }
+        }
+    }
+}

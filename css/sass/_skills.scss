@@ -1,0 +1,180 @@
+.svgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99vh;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+}
+
+#square3 {
+    animation: rotate1 6s ease infinite alternate;
+}
+
+#square3_2 {
+    animation: rotate2 4s ease infinite alternate;
+}
+
+#square3_3 {
+    transform-origin: center center;
+    transform-box: fill-box ;
+    animation: rotate3 5s ease infinite alternate;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotateX(30deg);
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(40deg);
+        width: 150px;
+        height: 150px;
+        fill-opacity: 1;
+    }
+}
+
+#bg-heroline3 {
+    animation: pulse1 3s ease infinite alternate;
+    transform-origin: center center;
+    transform-box: fill-box ;
+}
+
+#bg-heroline2 {
+    animation: pulse2 2s ease infinite alternate;
+    transform-box: fill-box ;
+    transform-origin: center center;
+}
+
+#bg-heroline1 {
+    animation: pulse3 1s ease infinite alternate;
+    transform-box: fill-box ;
+    transform-origin: center center;
+}
+
+@keyframes pulse1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes pulse3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(2deg);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .svg-hero {
+        transform: scale(2) rotate(25deg);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .svg-hero {
+        transform: scale(1.5) rotate(25deg);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .svg-hero {
+        transform: scale(1.5);
+    }
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerSkill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.containerSkills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.javascript, .html, .css, .react, .typescript, .postgre, .node, .mongo {
+    fill: $blue-normal;
+    background: transparent;
+
+    &:hover {
+        filter: brightness(.8);
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .containerSkills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill {
+        margin-bottom: 150px;
+    }
+}
