@@ -170,7 +170,7 @@ h6 {
 @media screen and (max-width: 390px) and (max-height: 844px) {
   .bubbles span {
     width: 1px;
-    height: 2px;
+    height: 1px;
   }
 }
 ul li a:hover {
