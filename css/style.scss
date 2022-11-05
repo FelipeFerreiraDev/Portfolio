@@ -6,21 +6,13 @@
 
 @import 'sass/colors';
 @import 'sass/typography';
-@import 'sass/background';
 @import 'sass/menu';
-@import 'sass/skills';
-@import 'sass/contact';
-
+@import 'sass/home';
 
 body {
     min-height: 100vh;
     background-color: $black-dark;
 }
-
-@import 'sass/spacing';
-@import 'sass/layout';
-@import 'sass/home';
-@import 'sass/about';
 
 ::-webkit-scrollbar {
   width: 12px;
