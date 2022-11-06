@@ -274,8 +274,13 @@ header .grid-layout nav .nav-list li a:hover {
   gap: 3rem;
 }
 .aboutContainer img {
-  width: 500px;
-  height: 500px;
+  width: 350px;
+  height: 350px;
+  transition: 0.5s;
+}
+.aboutContainer img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .aboutContainer span {
   color: #0066a5;
@@ -338,4 +343,31 @@ button {
 
 ::-webkit-scrollbar-track {
   background-color: #0066a5;
+}
+
+.typewriter:after {
+  content: "|";
+  margin-left: -0.3rem;
+  opacity: 1;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  color: #0066a5;
+}
+
+@-webkit-keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

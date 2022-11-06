@@ -9,8 +9,14 @@
     gap: 3rem;
 
     img {
-        width: 500px;
-        height: 500px;
+        width: 350px;
+        height: 350px;
+        transition: .5s;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
     }
 
     span {

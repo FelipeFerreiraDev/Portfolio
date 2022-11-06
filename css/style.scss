@@ -46,3 +46,21 @@ button {
 ::-webkit-scrollbar-track {
   background-color: $blue-dark;
 }
+
+.typewriter:after {
+  content: "|";
+  margin-left: -.3rem;
+  opacity: 1;
+  animation: blink 1s infinite;
+  color: $blue-dark;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
