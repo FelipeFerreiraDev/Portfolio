@@ -1,0 +1,49 @@
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    padding: 0px 50px;
+    background: $black-light;
+    gap: 3rem;
+
+    img {
+        width: 500px;
+        height: 500px;
+    }
+
+    span {
+        color: $blue-dark
+    }
+
+    p {
+        line-height: 2rem;
+        margin-bottom: 50px;
+        color: $gray-2;
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 24px 0px;    
+    }
+}
+
+hr {
+    border: 1px solid $blue-dark;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 24px 0px 24px;
+
+        svg {
+            display: none;
+        }
+    }
+}

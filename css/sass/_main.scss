@@ -1,0 +1,95 @@
+#s-home {
+    padding: 0px 50px;
+    position: relative;
+     @media screen and (max-width: 992px) {
+      padding: 100px 20px;
+    }
+    .grid-layout {
+      #home {
+        display: flex;
+        align-items: center;
+        min-height: 90vh;
+        padding: 200px 0px;
+         @media screen and (max-width: 992px) {
+          padding: 0px;
+        }
+        overflow: hidden;
+        width: 100%;
+        #home-container-text {
+          width: 100%;
+          flex-direction: column;
+
+           @media screen and (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            padding: 0px;
+          }
+          h1 {
+            color: $white-normal;
+            max-width: 700px;
+            line-height: 140%;
+            font: {
+              size: 3rem;
+              weight: 400;
+            }
+             @media screen and (max-width: 992px) {
+              font-size: 3.2rem;
+            }
+            span {
+              color: $blue-dark;
+            }
+          }
+          p {
+            color: $white-normal;
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 40px 0px;
+            font-weight: 400;
+            line-height: 140%;
+          }
+          a {
+            border: 1px solid $blue-dark;
+            background: transparent;
+            color: white;
+            backdrop-filter: blur(10px);
+            padding: 20px 32px;
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s ease;
+            margin-top: 30px;
+            font: {
+              size: 18px;
+              weight: 500;
+            }
+            &:hover {
+              transition: all 0.4s ease;
+              background: linear-gradient(30deg, $blue-light 0%, $blue-dark 50%);
+              border: 1px solid $blue-light;
+            }
+          }
+        }
+        #logo {
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translate(0%, -50%);
+          filter: blur(0px);
+          animation: logoAnimation 4s infinite alternate;
+          @media screen and (max-width: 1200px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes logoAnimation {
+    0% {
+      filter: blur(4px);
+    }
+  }

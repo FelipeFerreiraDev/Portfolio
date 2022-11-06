@@ -2,16 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Archivo'
 }
 
 @import 'sass/colors';
 @import 'sass/typography';
 @import 'sass/menu';
 @import 'sass/home';
+@import 'sass/main';
+@import 'sass/about';
 
 body {
     min-height: 100vh;
     background-color: $black-dark;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+      font-size: 93.75%; // 15px
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+      font-size: 87.5%; // 14px
+  }
 }
 
 ::-webkit-scrollbar {

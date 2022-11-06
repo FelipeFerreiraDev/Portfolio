@@ -1,17 +1,51 @@
-const btnMobile = document.getElementById('btn-mobile');
-
-function toggleMenu(event) {
-    if(event.type === 'touchstart') event.preventDefault();
-    const nav = document.getElementById('nav');
-    nav.classList.toggle('active');
-    const active = nav.classList.contains('active');
-    event.currentTarget.setAttribute('aria-expanded', active);
-    if(active) {
-        event.currentTarget.setAttribute('arial-label', 'Fechar Menu');
-    } else {
-        event.currentTarget.setAttribute('arial-label', 'Abrir Menu');
+function menu() {
+    class MobileNavbar {
+      constructor(mobileMenu, navList, navLinks, navLinks2) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.navLinks2 = document.querySelectorAll(navLinks2);
+        this.activeClass = "active";
+        this.handleClick = this.handleClick.bind(this);
+        this.animateLinks();
+      }
+  
+      animateLinks() {
+        this.navLinks.forEach((link, index) => {
+          link.style.animation
+            ? (link.style.animation = "")
+            : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.3
+              }s`);
+        });
+      }
+  
+      handleClick() {
+        this.navList.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+      }
+  
+      addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+        this.navLinks2.forEach((item) => {
+          item.addEventListener("click", this.handleClick);
+        });
+      }
+  
+      init() {
+        if (this.mobileMenu) {
+          this.addClickEvent();
+        }
+        return this;
+      }
     }
-}
+    const mobileNavbar = new MobileNavbar(
+      ".mobile-menu",
+      ".nav-list",
+      ".nav-list li",
+      ".nav-list li a"
+    );
+    mobileNavbar.init();
+  }
 
-btnMobile.addEventListener('click', toggleMenu);
-btnMobile.addEventListener('touchstart', toggleMenu);
+  menu();
