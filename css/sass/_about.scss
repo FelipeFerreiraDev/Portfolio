@@ -28,6 +28,22 @@
         margin-bottom: 50px;
         color: $gray-2;
         font-size: 1.25rem;
+
+        a {
+            background: linear-gradient(90deg, $blue-dark, $blue-light);
+            text-decoration: none;
+            transition: 2s;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            &:hover {
+                background: linear-gradient(90deg, $blue-light, $blue-dark);
+                text-decoration: none;
+                transition: 2s;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
 
     h3 {
