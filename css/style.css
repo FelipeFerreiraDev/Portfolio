@@ -308,7 +308,7 @@ hr {
     align-items: center;
     padding: 0px 24px 0px 24px;
   }
-  .aboutContainer svg {
+  .aboutContainer .aboutImages {
     display: none;
   }
 }
